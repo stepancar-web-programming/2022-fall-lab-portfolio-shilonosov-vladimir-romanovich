@@ -66,3 +66,23 @@ modalCloses.forEach((modalClose) => {
         })
     })
 })
+
+let swiper = new Swiper('.swiper', {
+
+    cssMode: true,
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    mouseWheel: true,
+    keyboard: true,
+
+  });
