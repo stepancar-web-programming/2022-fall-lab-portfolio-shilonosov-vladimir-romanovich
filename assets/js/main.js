@@ -64,7 +64,7 @@ modalCloses.forEach((modalClose) => {
   });
 });
 
-// eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef, no-unused-vars
 const swiper = new Swiper('.swiper', {
 
   cssMode: true,
@@ -84,8 +84,6 @@ const swiper = new Swiper('.swiper', {
   keyboard: true
 });
 
-swiper();
-
 const sections = document.querySelectorAll('section[id]');
 
 function scrollActive() {
@@ -103,12 +101,10 @@ function scrollActive() {
     }
   });
 }
-
 window.addEventListener('scroll', scrollActive);
 
 function scrollHeader() {
   const nav = document.getElementById('header');
-
   if (this.scrollY >= 10) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader);
@@ -118,7 +114,6 @@ function scrollUp() {
 
   if (this.scrollY >= 560) scrollUpEl.classList.add('show-scroll'); else scrollUpEl.classList.remove('show-scroll');
 }
-
 window.addEventListener('scroll', scrollUp);
 
 const themeButton = document.getElementById('theme-button');
@@ -129,7 +124,6 @@ const selectedTheme = localStorage.getItem('selected-theme');
 const selectedIcon = localStorage.getItem('selected-item');
 
 const getCurrentTheme = () => (document.body.classList.contains(darkTheme) ? 'dark' : 'light');
-
 const getCurrentIcon = () => (document.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun');
 
 if (selectedTheme) {
