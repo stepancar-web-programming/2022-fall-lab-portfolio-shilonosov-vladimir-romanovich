@@ -869,7 +869,7 @@ footer__subtitle {
   .nav__list {
     column-gap: 0;
   }
-  
+
   .home__content {
     grid-template-columns: .25fr 3fr;
   }
@@ -953,7 +953,7 @@ footer__subtitle {
     margin-bottom: 4rem;
   }
 
-  .header{
+  .header {
     top: 0;
     bottom: initial;
   }
@@ -1080,7 +1080,8 @@ footer__subtitle {
 }
 
 @media screen and (min-width: 1024px) {
-  .header, 
+
+  .header,
   .main,
   .footer {
     padding: 0;
@@ -1106,15 +1107,15 @@ footer__subtitle {
     font-size: 3.5rem;
   }
 
-  .swiper-button-prev{
+  .swiper-button-prev {
     left: -3.5rem;
   }
-  
+
   .swiper-button-next {
     right: -3.5rem;
   }
 
-  .swiper-container-horizontal > .swiper-pagination-bullets {
+  .swiper-container-horizontal>.swiper-pagination-bullets {
     bottom: -4.5rem;
   }
 
