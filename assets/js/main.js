@@ -138,3 +138,13 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme);
   localStorage.setItem('selected-icon', getCurrentIcon);
 });
+
+function redirect() {
+  const name = document.querySelector('.contact__input[type="text"]').value;
+  const email = document.querySelector('.contact__input[type="email"]').value;
+  const encodedCommand = btoa(`{"name": "${name}", "email": "${email}"}`);
+  window.open(`https://t.me/my_super_boss_for_contact_bot?start=${encodedCommand}`, '_blank');
+}
+
+const sendMessage = document.querySelector('.send-message__button');
+sendMessage.addEventListener('click', redirect);

@@ -747,12 +747,12 @@ img {
 .contact__title {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
+  text-decoration: none;
 }
 
-.contact__subritle {
+.contact__subtitle {
   font-size: var(--small-font-size);
-  color: --text-color-light;
-
+  color: var(--text-color-light);
 }
 
 .contact__content {
