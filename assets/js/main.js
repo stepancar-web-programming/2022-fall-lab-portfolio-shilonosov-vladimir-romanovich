@@ -27,14 +27,21 @@ navLink.forEach((n) => n.addEventListener('click', linkAction));
 const skillsContent = document.getElementsByClassName('skills__content');
 const skillsHeader = document.querySelectorAll('.skills__header');
 
-function toggleSkills() {
-  const itemClass = this.parentNode.className;
+let openSkillsNum = 0;
 
+function toggleSkills() {
   for (let i = 0; i < skillsContent.length; i += 1) {
-    skillsContent[i].className = 'skills__content skills__close';
-  }
-  if (itemClass === 'skills__content skills__close') {
-    this.parentNode.className = 'skills__content skills__open';
+    if (this.parentNode === skillsContent[i]) {
+      if (i === openSkillsNum) {
+        openSkillsNum = -1;
+        skillsContent[i].className = 'skills__content skills__close';
+      } else {
+        openSkillsNum = i;
+        skillsContent[i].className = 'skills__content skills__open';
+      }
+    } else {
+      skillsContent[i].className = 'skills__content skills__close';
+    }
   }
 }
 
@@ -46,14 +53,16 @@ const modalViews = document.querySelectorAll('.services__modal');
 const modalBtns = document.querySelectorAll('.services__button');
 const modalCloses = document.querySelectorAll('.services__modal-close');
 
-const modal = function f(modalClick) {
-  modalViews[modalClick].classList.add('active-modal');
-};
+function openModal() {
+  for (let i = 0; i < modalBtns.length; i += 1) {
+    if (this === modalBtns[i]) {
+      modalViews[i].classList.add('active-modal');
+    }
+  }
+}
 
-modalBtns.forEach((modalBtn, i) => {
-  modalBtn.addEventListener('click', () => {
-    modal(i);
-  });
+modalBtns.forEach((modalBtn) => {
+  modalBtn.addEventListener('click', openModal);
 });
 
 modalCloses.forEach((modalClose) => {
@@ -142,7 +151,7 @@ themeButton.addEventListener('click', () => {
 function redirect() {
   const name = document.querySelector('.contact__input[type="text"]').value;
   const email = document.querySelector('.contact__input[type="email"]').value;
-  const encodedCommand = btoa(`{"name": "${name}", "email": "${email}"}`);
+  const encodedCommand = btoa(`{"name": "${name}", "email": "${email}"}`).slice(0, 64);
   window.open(`https://t.me/my_super_boss_for_contact_bot?start=${encodedCommand}`, '_blank');
 }
 
