@@ -1,0 +1,24 @@
+{
+  "name": "2022-fall-lab-portfolio-shilonosov-vladimir-romanovich",
+  "version": "1.0.0",
+  "description": "Шилоносов Владимир Романович\r https://vladimirds.netlify.app/\r ## Стек технологий\r - HTML\r - CSS\r - JS",
+  "scripts": {
+    "lint": "eslint -c .eslintrc.json --ext .js ./assets/js/main.js",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepancar-web-programming/2022-fall-lab-portfolio-shilonosov-vladimir-romanovich.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stepancar-web-programming/2022-fall-lab-portfolio-shilonosov-vladimir-romanovich/issues"
+  },
+  "homepage": "https://vladimirds.netlify.app/",
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4"
+  }
+}

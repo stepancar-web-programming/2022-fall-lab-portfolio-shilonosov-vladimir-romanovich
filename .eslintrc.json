@@ -1,0 +1,16 @@
+{
+    "extends": [
+      "airbnb"
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "comma-dangle": ["error", "never"],
+      "semi": ["warn", "always"],
+      "prefer-const": "warn",
+      "linebreak-style": "off"
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  }
